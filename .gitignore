@@ -1,0 +1,5 @@
+.idea
+.vscode
+blog-backend-service
+storage
+secret.yaml

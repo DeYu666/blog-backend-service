@@ -1,0 +1,120 @@
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[31.484ms] [rows:-] SELECT DATABASE()
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[61.158ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/04 20:30:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[60.234ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[30.891ms] [rows:-] SELECT DATABASE()
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[60.614ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[65.212ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[30.796ms] [rows:-] SELECT DATABASE()
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[61.424ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/04 20:30:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[60.778ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[34.177ms] [rows:-] SELECT DATABASE()
+
+2022/04/04 20:30:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[61.112ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/04 20:30:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[61.570ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/04 20:30:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[30.723ms] [rows:1] SELECT * FROM `auth_users`
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16
+[132.808ms] [rows:1] INSERT INTO `auth_users` (`password`,`last_login`,`is_superuser`,`username`,`first_name`,`email`,`is_staff`,`is_active`,`date_joined`,`last_name`) VALUES ('','','','test_golang','','','','','','')
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[64.656ms] [rows:1] SELECT * FROM `auth_users` WHERE `username` = 'test_golang'
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[61.514ms] [rows:1] SELECT * FROM `auth_users` WHERE `id` = 3
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/user/user.go:52
+[134.003ms] [rows:1] UPDATE `auth_users` SET `password`='',`last_login`='',`is_superuser`='',`username`='test_modify_golang',`first_name`='',`email`='',`is_staff`='',`is_active`='',`date_joined`='',`last_name`='' WHERE `id` = 3
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[64.660ms] [rows:1] SELECT * FROM `auth_users` WHERE `id` = 3
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54
+[131.434ms] [rows:1] DELETE FROM `auth_users` WHERE `id` = 3
+
+2022/04/04 20:30:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[64.011ms] [rows:0] SELECT * FROM `auth_users` WHERE `id` = 3
+
+2022/04/12 16:00:56 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[50.255ms] [rows:-] SELECT DATABASE()
+
+2022/04/12 16:00:56 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[107.763ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/12 16:00:56 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[97.356ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/12 16:00:56 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.373ms] [rows:-] SELECT DATABASE()
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[101.765ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[98.632ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.741ms] [rows:-] SELECT DATABASE()
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[99.837ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/12 16:00:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[99.648ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[50.802ms] [rows:-] SELECT DATABASE()
+
+2022/04/12 16:00:57 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[101.428ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/12 16:00:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[101.616ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/12 16:00:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[48.035ms] [rows:1] SELECT * FROM `auth_users`
+
+2022/04/12 16:00:57 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16 SLOW SQL >= 200ms
+[204.563ms] [rows:1] INSERT INTO `auth_users` (`password`,`last_login`,`is_superuser`,`username`,`first_name`,`email`,`is_staff`,`is_active`,`date_joined`,`last_name`) VALUES ('','','','test_golang','','','','','','')
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[100.314ms] [rows:1] SELECT * FROM `auth_users` WHERE `username` = 'test_golang'
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[111.735ms] [rows:1] SELECT * FROM `auth_users` WHERE `id` = 4
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/user/user.go:52 SLOW SQL >= 200ms
+[203.657ms] [rows:1] UPDATE `auth_users` SET `password`='',`last_login`='',`is_superuser`='',`username`='test_modify_golang',`first_name`='',`email`='',`is_staff`='',`is_active`='',`date_joined`='',`last_name`='' WHERE `id` = 4
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[103.695ms] [rows:1] SELECT * FROM `auth_users` WHERE `id` = 4
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54 SLOW SQL >= 200ms
+[212.311ms] [rows:1] DELETE FROM `auth_users` WHERE `id` = 4
+
+2022/04/12 16:00:58 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[103.124ms] [rows:0] SELECT * FROM `auth_users` WHERE `id` = 4

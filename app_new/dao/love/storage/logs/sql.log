@@ -1,0 +1,120 @@
+
+2022/04/19 15:32:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[47.421ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[93.652ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:32:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[95.487ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[46.931ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[96.139ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[95.536ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[46.813ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[96.275ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:32:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[96.390ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[46.916ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:32:22 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[97.041ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:32:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[95.977ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16
+[199.921ms] [rows:1] INSERT INTO `love_infos` (`confession_time`) VALUES ('2022-04-19 15:32:22.852')
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[48.006ms] [rows:1] SELECT * FROM `love_infos`
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[96.690ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 1
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/love/loveInfo.go:47
+[191.574ms] [rows:0] UPDATE `love_infos` SET `confession_time`='2022-04-19 15:32:23.101' WHERE `id` = 1
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/love/loveInfo.go:47
+[95.372ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 1 LIMIT 1
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[95.087ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 1
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54
+[197.635ms] [rows:1] DELETE FROM `love_infos` WHERE `id` = 1
+
+2022/04/19 15:32:23 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[95.176ms] [rows:0] SELECT * FROM `love_infos` WHERE `id` = 1
+
+2022/04/19 15:38:20 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.198ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:38:20 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[99.082ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:38:20 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[99.833ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/19 15:38:20 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.741ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:38:20 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[98.563ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:38:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[99.874ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/19 15:38:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.362ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:38:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[99.506ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:38:21 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[100.285ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/19 15:38:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.309ms] [rows:-] SELECT DATABASE()
+
+2022/04/19 15:38:21 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[99.341ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/19 15:38:21 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[100.999ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/19 15:38:21 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16 SLOW SQL >= 200ms
+[214.880ms] [rows:1] INSERT INTO `love_infos` (`confession_time`) VALUES ('2022-04-19 15:38:21.537')
+
+2022/04/19 15:38:21 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[53.718ms] [rows:1] SELECT * FROM `love_infos`
+
+2022/04/19 15:38:21 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[98.606ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 2
+
+2022/04/19 15:38:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/love/loveInfo.go:47
+[197.382ms] [rows:0] UPDATE `love_infos` SET `confession_time`='2022-04-19 15:38:21.806' WHERE `id` = 2
+
+2022/04/19 15:38:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/love/loveInfo.go:47
+[98.102ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 2 LIMIT 1
+
+2022/04/19 15:38:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[98.524ms] [rows:1] SELECT * FROM `love_infos` WHERE `id` = 2
+
+2022/04/19 15:38:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54 SLOW SQL >= 200ms
+[205.523ms] [rows:1] DELETE FROM `love_infos` WHERE `id` = 2
+
+2022/04/19 15:38:22 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[98.697ms] [rows:0] SELECT * FROM `love_infos` WHERE `id` = 2

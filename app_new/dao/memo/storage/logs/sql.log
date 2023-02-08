@@ -1,0 +1,96 @@
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[53.357ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[110.979ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 15:28:28 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[108.610ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[56.170ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[107.898ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[109.191ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[52.314ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[106.946ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 15:28:28 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[108.302ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/26 15:28:28 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[56.073ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 15:28:29 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[109.932ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 15:28:29 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[109.328ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/26 15:28:29 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16 SLOW SQL >= 200ms
+[239.463ms] [rows:1] INSERT INTO `memos` (`content`,`status`,`created_time`,`modified_time`) VALUES ('test_golang',0,'2022-04-26 15:28:29.156','2022-04-26 15:28:29.156')
+
+2022/04/26 15:28:29 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[54.494ms] [rows:1] SELECT * FROM `memos`
+
+2022/04/26 15:28:29 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54 SLOW SQL >= 200ms
+[220.614ms] [rows:1] DELETE FROM `memos` WHERE `id` = 1
+
+2022/04/26 15:28:29 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[107.114ms] [rows:0] SELECT * FROM `memos` WHERE `id` = 1
+
+2022/04/26 16:24:30 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[46.885ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 16:24:30 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[95.605ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 16:24:30 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[96.674ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'myBlog' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2022/04/26 16:24:30 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[49.074ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 16:24:30 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[99.833ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 16:24:31 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:205
+[95.383ms] [rows:-] SELECT column_name, is_nullable, data_type, character_maximum_length, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'myBlog' AND table_name = 'users'
+
+2022/04/26 16:24:31 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[49.377ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 16:24:31 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[95.967ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 16:24:31 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[97.194ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2022/04/26 16:24:31 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:234
+[48.750ms] [rows:-] SELECT DATABASE()
+
+2022/04/26 16:24:31 /Users/zhangdeyu/go/pkg/mod/gorm.io/driver/mysql@v1.2.1/migrator.go:237
+[97.325ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'myBlog%' ORDER BY SCHEMA_NAME='myBlog' DESC limit 1
+
+2022/04/26 16:24:31 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/bootstrap/db.go:32
+[95.579ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'myBlog' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2022/04/26 16:24:31 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:16 SLOW SQL >= 200ms
+[206.236ms] [rows:1] INSERT INTO `memos` (`content`,`status`,`created_time`,`modified_time`) VALUES ('test_golang',0,'2022-04-26 16:24:31.504','2022-04-26 16:24:31.504')
+
+2022/04/26 16:24:31 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[48.953ms] [rows:1] SELECT * FROM `memos`
+
+2022/04/26 16:24:31 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:54 SLOW SQL >= 200ms
+[201.149ms] [rows:1] DELETE FROM `memos` WHERE `id` = 2
+
+2022/04/26 16:24:32 /Users/zhangdeyu/Desktop/项目/Front-MyBlog/blog_back_end_go/app_new/dao/common/dbctl/common.go:38
+[98.196ms] [rows:0] SELECT * FROM `memos` WHERE `id` = 2
