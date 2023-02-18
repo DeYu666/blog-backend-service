@@ -62,19 +62,25 @@ func initMySqlGorm() *gorm.DB {
 		DontSupportRenameColumn:   true,  // 用 `change` 重命名列，MySQL 8 之前的数据库和 MariaDB 不支持重命名列
 		SkipInitializeWithVersion: false, // 根据版本自动配置
 	}
-	if db, err := gorm.Open(mysql.New(mysqlConfig), &gorm.Config{
-		DisableForeignKeyConstraintWhenMigrating: false,           // 禁用自动创建外键约束
-		Logger:                                   getGormLogger(), // 使用自定义 Logger
-	}); err != nil {
-		global.App.Log.Error("mysql connect failed, err:", zap.Any("err", err))
-		return nil
-	} else {
-		sqlDB, _ := db.DB()
-		sqlDB.SetMaxIdleConns(dbConfig.MaxIdleConns)
-		sqlDB.SetMaxOpenConns(dbConfig.MaxOpenConns)
-		initMySqlTables(db)
-		return db
+
+	// try connecting to mysql repeatedly
+	for {
+		if db, err := gorm.Open(mysql.New(mysqlConfig), &gorm.Config{
+			DisableForeignKeyConstraintWhenMigrating: false,           // 禁用自动创建外键约束
+			Logger:                                   getGormLogger(), // 使用自定义 Logger
+		}); err != nil {
+			global.App.Log.Error("mysql connect failed, err:", zap.Any("err", err))
+
+			time.Sleep(30 * time.Second)
+		} else {
+			sqlDB, _ := db.DB()
+			sqlDB.SetMaxIdleConns(dbConfig.MaxIdleConns)
+			sqlDB.SetMaxOpenConns(dbConfig.MaxOpenConns)
+			initMySqlTables(db)
+			return db
+		}
 	}
+
 }
 
 // 自定义 gorm Writer
