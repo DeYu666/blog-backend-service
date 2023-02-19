@@ -17,9 +17,6 @@ LDFLAGS += -X "$(project)/version.GitBranch=$(shell git rev-parse --abbrev-ref H
 build:
 	go build -o $(TARGETS) main.go
 
-# $(TARGETS): $(SRC)
-# 	$(GO) build -ldflags '$(LDFLAGS)' $@
-
 image: $(TARGETS)
 	cp -f Dockerfile.j2 Dockerfile
 	sed -i'' -e "s/{{REGISTRY_ADDRESS}}/$(REGISTRY_ADDRESS)/g" Dockerfile
@@ -27,13 +24,16 @@ image: $(TARGETS)
 	sed -i'' -e "s/{{EXE_NAME}}/$(TARGETS)/g" Dockerfile
 	docker build -t $(IMAGE_FULLNAME) .
 
+push:
+	docker tag $(IMAGE_FULLNAME) deyu666/$(IMAGE_NAME):latest
+	docker push deyu666/$(IMAGE_NAME):latest
+
 build-linux:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags '$(LDFLAGS)' $(project)
 
 lint:
 	#@gometalinter --disable-all --enable=gosec --exclude="Errors unhandled"  ./...
 	@golangci-lint run --deadline=5m
-
 
 packages = $(shell go list ./...|grep -v /vendor/)
 test: check
