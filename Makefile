@@ -24,7 +24,7 @@ image: $(TARGETS)
 	sed -i'' -e "s/{{EXE_NAME}}/$(TARGETS)/g" Dockerfile
 	docker build -t $(IMAGE_FULLNAME) .
 
-push:
+image-push:
 	docker tag $(IMAGE_FULLNAME) deyu666/$(IMAGE_NAME):latest
 	docker push deyu666/$(IMAGE_NAME):latest
 
