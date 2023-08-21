@@ -20,7 +20,7 @@ build:
 image: $(TARGETS)
 	docker build -t $(IMAGE_FULLNAME) . --platform linux/amd64
 
-image-push:
+push-image:
 	docker tag $(IMAGE_FULLNAME) deyu666/$(IMAGE_NAME):latest
 	docker push deyu666/$(IMAGE_NAME):latest
 
@@ -31,7 +31,7 @@ lint:
 	#@gometalinter --disable-all --enable=gosec --exclude="Errors unhandled"  ./...
 	@golangci-lint run --deadline=5m
 
-clear:
+clean:
 	rm -rf blog-backend-service
 
 
