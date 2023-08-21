@@ -32,3 +32,11 @@ LOG_ROOT_DIR=/data/log
 DB_HOST=172.17.0.2
 GIN_MODE=release
 ```
+
+
+
+# 要做的事情
+- [x] 1. 对 log 设置 traceId ，梳理一下 log 库，然后也写一篇文章
+- [x] 2. 梳理 jwt 的使用逻辑，写一篇 jwt 实现原理文章，然后顺带梳理一下 service/jwt.go 代码
+- [x] 3. 提取从 ctx 中获取 author_id 方法，然后优化 diary 的 delivery/diary.GetDiary 方法
+- [x] 4. delivery/diary.GetDiary 方法有 bug，解析 token 后没有验证解析出来的 author_id 是否是我们系统中的用户
