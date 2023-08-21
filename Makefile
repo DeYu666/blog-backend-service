@@ -15,25 +15,25 @@ LDFLAGS += -X "$(project)/version.GitHash=$(shell git rev-parse HEAD)"
 LDFLAGS += -X "$(project)/version.GitBranch=$(shell git rev-parse --abbrev-ref HEAD)"
 
 build:
-	go build -o $(TARGETS) main.go
+	go build -o $(TARGETS) cmd/backend/main.go
 
 image: $(TARGETS)
-	cp -f Dockerfile.j2 Dockerfile
-	sed -i'' -e "s/{{REGISTRY_ADDRESS}}/$(REGISTRY_ADDRESS)/g" Dockerfile
-	sed -i'' -e "s/{{IMAGE_NAME}}/$(IMAGE_NAME)/g" Dockerfile
-	sed -i'' -e "s/{{EXE_NAME}}/$(TARGETS)/g" Dockerfile
-	docker build -t $(IMAGE_FULLNAME) .
+	docker build -t $(IMAGE_FULLNAME) . --platform linux/amd64
 
 image-push:
 	docker tag $(IMAGE_FULLNAME) deyu666/$(IMAGE_NAME):latest
 	docker push deyu666/$(IMAGE_NAME):latest
 
 build-linux:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags '$(LDFLAGS)' $(project)
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o $(TARGETS) cmd/backend/main.go
 
 lint:
 	#@gometalinter --disable-all --enable=gosec --exclude="Errors unhandled"  ./...
 	@golangci-lint run --deadline=5m
+
+clear:
+	rm -rf blog-backend-service
+
 
 packages = $(shell go list ./...|grep -v /vendor/)
 test: check

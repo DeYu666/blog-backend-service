@@ -1,5 +1,6 @@
 .idea
 .vscode
+.DS_Store
 blog-backend-service
 storage
 secret.yaml
