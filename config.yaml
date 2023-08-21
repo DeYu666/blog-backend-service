@@ -8,9 +8,9 @@ database:
   driver: mysql   # 数据库驱动
   host: 192.168.0.200 # 域名
   port: 3306      # 端口
-  database: myBlog # 数据库名称
+  database: database # 数据库名称
   username: root # 用户名
-  password: NouPiNiangShiMM.1314 # 密码
+  password: password # 密码
   charset: utf8mb4 # 编码格式
   max_idle_conns: 10  # 空闲连接池中连接的最大数量
   max_open_conns: 100 # 打开数据库连接的最大数量
@@ -36,6 +36,6 @@ jwt:
 
 
 qiniuyun:
-  accessKey: XQP6jvo25pJAwKPEcRXrmGKDX2KrgyZPaL7Fw9h5
-  secretKey: 2TikJkuXDbBs7rG0aDCSOSi3ubQoT8F06mENCFBc
-  bucket: myfreespacep
+  accessKey: accessKey
+  secretKey: secretKey
+  bucket: bucket
