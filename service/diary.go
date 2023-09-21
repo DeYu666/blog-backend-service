@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"time"
 
 	"github.com/DeYu666/blog-backend-service/lib/client"
 	"github.com/DeYu666/blog-backend-service/model"
@@ -77,6 +78,9 @@ func (d *diaryService) CreateDiary(ctx context.Context, diary model.Diary) error
 
 	var err error
 
+	diary.CreatedTime = time.Now()
+	diary.ModifiedTime = time.Now()
+
 	err = client.Mysql.DB().Transaction(func(tx *gorm.DB) error {
 		err = d.diaryRepo.CreateDiary(ctx, tx, diary)
 		return err
@@ -88,6 +92,8 @@ func (d *diaryService) CreateDiary(ctx context.Context, diary model.Diary) error
 func (d *diaryService) UpdateDiary(ctx context.Context, diary model.Diary) error {
 
 	var err error
+
+	diary.ModifiedTime = time.Now()
 
 	err = client.Mysql.DB().Transaction(func(tx *gorm.DB) error {
 		err = d.diaryRepo.UpdateDiary(ctx, tx, diary)
